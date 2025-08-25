@@ -486,3 +486,5 @@ Copyright (C) 2016, Wazuh Inc.  (License GPLv2)
 ## Web references
 
 - [Wazuh website](http://wazuh.com)
+
+# image id: ami-0a232144cf20a27a5
