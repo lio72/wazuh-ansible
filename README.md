@@ -487,4 +487,14 @@ Copyright (C) 2016, Wazuh Inc.  (License GPLv2)
 
 - [Wazuh website](http://wazuh.com)
 
-# image id: ami-0a232144cf20a27a5
+# image id: ami-0a232144cf20a27a5 for amzone 2023 image
+
+# add ssh public key on host for ansible
+- deployer l'infra avec terraform
+- creation d'une clé ssh  pour assible
+ssh-keygen -t rsa -b 4096 -C "yamkamlionel@gmail.com"
+- copier la clé public sur les host dans le repertoire
+~/.ssh/authorized_keys
+nb : on peut faire avec la commande ssh-copy-id 
+ssh-copy-id -i ~/.ssh/user1.pub ubuntu@54.162.84.31
+
