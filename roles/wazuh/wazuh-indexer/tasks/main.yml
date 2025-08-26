@@ -104,8 +104,8 @@
       until:
         - _result is defined
         - '"green" in _result.content or ( "yellow" in _result.content and single_node )'
-      retries: 24
-      delay: 5
+      retries: 40
+      delay: 15
       tags: debug
       when:
         - hostvars[inventory_hostname]['private_ip'] is not defined or not hostvars[inventory_hostname]['private_ip']
