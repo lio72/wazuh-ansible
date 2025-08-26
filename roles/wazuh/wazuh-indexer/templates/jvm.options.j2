@@ -23,9 +23,9 @@
 
 -Xmx{{ indexer_jvm_xms }}m
 {% else %}
--Xms32000m
+-Xms1000m
 
--Xmx32000m
+-Xmx1000m
 {% endif %}
 {% else %}
 -Xms{% if ansible_memtotal_mb < 64000 %}{{ ((ansible_memtotal_mb|int)/2)|int }}m{% else %}32000m{% endif %}
