@@ -1,11 +1,11 @@
 ---
 # Cluster Settings
-indexer_version: 4.12.0
+indexer_version: 5.0.0
 
 single_node: false
 indexer_node_name: node-1
 indexer_cluster_name: wazuh
-indexer_network_host: '172.0.0.1'
+indexer_network_host: '0.0.0.0'
 
 indexer_node_master: true
 indexer_node_data: true
@@ -13,13 +13,9 @@ indexer_node_ingest: true
 indexer_start_timeout: 90
 
 indexer_cluster_nodes:
-  - 'node-1'
-  - 'node-2'
-  - 'node-3'
+  - 127.0.0.1
 indexer_discovery_nodes:
-  - '172.31.22.131'
-  - '172.31.23.246'
-  - '172.31.24.162'
+  - 127.0.0.1
 
 local_certs_path: "{{ playbook_dir }}/indexer/certificates"
 
