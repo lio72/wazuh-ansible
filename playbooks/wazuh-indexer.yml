@@ -7,14 +7,14 @@
     instances:           # A certificate will be generated for every node using the name as CN.
       node1:
         name: node-1
-        ip: <node-1 IP>
+        ip: 172.31.22.131
         role: indexer
       node2:
         name: node-2
-        ip: <node-2 IP>
+        ip: 172.31.23.246 
         role: indexer
       node3:
         name: node-3
-        ip: <node-3 IP>
+        ip: 172.31.24.162
         role: indexer
 
