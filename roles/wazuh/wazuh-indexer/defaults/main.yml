@@ -3,7 +3,7 @@
 indexer_version: 4.12.0
 
 single_node: false
-indexer_node_name: ip-172-31-41-244 
+indexer_node_name: node-1
 indexer_cluster_name: wazuh
 indexer_network_host: '0.0.0.0'
 
