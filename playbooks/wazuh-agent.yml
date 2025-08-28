@@ -14,3 +14,9 @@
         api_user: wazuh
         max_retries: 5
         retry_interval: 5
+    wazuh_agent_authd:
+      registration_address: 44.222.181.248
+      enable: true
+      port: 1515
+      ssl_agent_ca: null
+      ssl_auto_negotiate: 'no'
