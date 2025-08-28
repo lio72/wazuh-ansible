@@ -1,3 +1,7 @@
+
+agent1  ansible_host=44.211.244.51 private_ip=172.31.3.228
+agent2 ansible_host=44.222.181.248 private_ip=172.31.3.252
+
 [wazuh-agents]
-172.31.0.136
-172.31.0.212
+agent1
+agent2
