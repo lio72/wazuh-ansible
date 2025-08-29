@@ -146,10 +146,10 @@ wazuh_manager_sca:
 ## Vulnerability Detector
 filebeat_node_name: node-1
 filebeat_output_indexer_hosts:
-  # - "localhost"
-  - 172.31.0.239
-  - 172.31.2.225
-  - 172.31.13.5
+  - "localhost"
+  # - 172.31.0.239
+  # - 172.31.2.225
+  # - 172.31.13.5
 filebeat_output_indexer_port: 9200
 indexer_security_user: admin
 indexer_security_password: changeme
