@@ -6,7 +6,7 @@ wazuh_template_branch: v4.12.0
 filebeat_node_name: node-1
 
 filebeat_output_indexer_hosts:
-  # - "localhost"
+  - "localhost:9200"
   - "172.31.0.239:9200"
   - "172.31.2.225:9200"
   - "172.31.13.5:9200"  
