@@ -3,10 +3,11 @@ filebeat_version: 7.10.2
 
 wazuh_template_branch: v4.12.0
 
-filebeat_node_name: node-1
+filebeat_node_name: node-5
 
 filebeat_output_indexer_hosts:
-  - "localhost:9200" 
+  - "localhost:9200"
+  - "172.31.0.239:9200"
 filebeat_module_package_name: wazuh-filebeat-0.4.tar.gz
 filebeat_module_package_path: /tmp/
 filebeat_module_destination: /usr/share/filebeat/module
