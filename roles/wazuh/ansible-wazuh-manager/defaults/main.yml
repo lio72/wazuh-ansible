@@ -144,7 +144,7 @@ wazuh_manager_sca:
   time: ''
 
 ## Vulnerability Detector
-filebeat_node_name: node-5
+filebeat_node_name: node-1
 filebeat_output_indexer_hosts:
   - "localhost"
   - "172.31.0.239"
@@ -423,50 +423,50 @@ wazuh_manager_config_defaults:
   agents_disconnection_time: '{{ wazuh_manager_agent_disconnection_time }}'
   agents_disconnection_alert_time: '{{ wazuh_manager_agents_disconnection_alert_time }}'
 
-# shared-agent.conf
+# # shared-agent.conf
 
-shared_agent_config:
-  - type: os
-    type_value: Linux
-    syscheck:
-      frequency: 43200
-      scan_on_start: 'yes'
-      ignore:
-        - /etc/mtab
-        - /etc/mnttab
-        - /etc/hosts.deny
-        - /etc/mail/statistics
-        - /etc/svc/volatile
-      no_diff:
-        - /etc/ssl/private.key
-    rootcheck:
-      frequency: 43200
-      cis_distribution_filename: null
-    localfiles:
-      - format: 'syslog'
-        location: '/var/log/messages'
-      - format: 'syslog'
-        location: '/var/log/secure'
-      - format: 'syslog'
-        location: '/var/log/maillog'
-      - format: 'apache'
-        location: '/var/log/httpd/error_log'
-      - format: 'apache'
-        location: '/var/log/httpd/access_log'
-      - format: 'apache'
-        location: "{{ wazuh_dir }}/logs/active-responses.log"
-  - type: os
-    type_value: Windows
-    syscheck:
-      frequency: 43200
-      scan_on_start: 'yes'
-      auto_ignore: 'no'
-      windows_registry:
-        - key: 'HKEY_LOCAL_MACHINE\Software\Classes\batfile'
-          arch: 'both'
-        - key: 'HKEY_LOCAL_MACHINE\Software\Classes\Folder'
-    localfiles:
-      - location: 'Security'
-        format: 'eventchannel'
-      - location: 'System'
-        format: 'eventlog'
+# shared_agent_config:
+#   - type: os
+#     type_value: Linux
+#     syscheck:
+#       frequency: 43200
+#       scan_on_start: 'yes'
+#       ignore:
+#         - /etc/mtab
+#         - /etc/mnttab
+#         - /etc/hosts.deny
+#         - /etc/mail/statistics
+#         - /etc/svc/volatile
+#       no_diff:
+#         - /etc/ssl/private.key
+#     rootcheck:
+#       frequency: 43200
+#       cis_distribution_filename: null
+#     localfiles:
+#       - format: 'syslog'
+#         location: '/var/log/messages'
+#       - format: 'syslog'
+#         location: '/var/log/secure'
+#       - format: 'syslog'
+#         location: '/var/log/maillog'
+#       - format: 'apache'
+#         location: '/var/log/httpd/error_log'
+#       - format: 'apache'
+#         location: '/var/log/httpd/access_log'
+#       - format: 'apache'
+#         location: "{{ wazuh_dir }}/logs/active-responses.log"
+#   - type: os
+#     type_value: Windows
+#     syscheck:
+#       frequency: 43200
+#       scan_on_start: 'yes'
+#       auto_ignore: 'no'
+#       windows_registry:
+#         - key: 'HKEY_LOCAL_MACHINE\Software\Classes\batfile'
+#           arch: 'both'
+#         - key: 'HKEY_LOCAL_MACHINE\Software\Classes\Folder'
+#     localfiles:
+#       - location: 'Security'
+#         format: 'eventchannel'
+#       - location: 'System'
+#         format: 'eventlog'

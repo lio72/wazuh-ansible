@@ -3,7 +3,7 @@ filebeat_version: 7.10.2
 
 wazuh_template_branch: v4.12.0
 
-filebeat_node_name: node-5
+filebeat_node_name: node-1
 
 filebeat_output_indexer_hosts:
   - "localhost:9200"
